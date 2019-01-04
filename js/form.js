@@ -21,17 +21,15 @@ botaoAdicionar.addEventListener("click", function(event){
     pesoTd.textContent = peso;
     alturaTd.textContent = altura;
     gorduraTd.textContent = gordura;
+    imcTd.textContent = calculaImc(peso,altura);
 
     pacienteTR.appendChild(nomeTd);
     pacienteTR.appendChild(pesoTd);
     pacienteTR.appendChild(alturaTd);
     pacienteTR.appendChild(gorduraTd);
+    pacienteTR.appendChild(imcTd);
 
     var tabela = document.querySelector("#tabela-pacientes");
 
     tabela.appendChild(pacienteTR);
-});
-
-titulo.addEventListener("Click",function(){
-    console.log("fui clicado");
 });
